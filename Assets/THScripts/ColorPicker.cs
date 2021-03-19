@@ -10,7 +10,7 @@ public class ColorPicker : MonoBehaviour
     [SerializeField]
     private UnityEngine.UI.InputField text;
     [SerializeField]
-    private UnityEngine.UI.Image imagess;
+    private UnityEngine.UI.Image colorPickerImage;
     [SerializeField]
     private UnityEngine.UI.Slider slider;
 
@@ -158,7 +158,7 @@ public class ColorPicker : MonoBehaviour
         Texture2D texture = new Texture2D(imageWidth + 2, imageHeight + 2, TextureFormat.RGBA32, false);
         texture.LoadRawTextureData(imageToByteArray(image));
         texture.Apply();
-        imagess.sprite = Sprite.Create(texture, new Rect(0, 0, imageWidth + 2, imageHeight + 2), Vector2.one);
+        colorPickerImage.sprite = Sprite.Create(texture, new Rect(0, 0, imageWidth + 2, imageHeight + 2), Vector2.one);
     }
 
     public void SetColor()
